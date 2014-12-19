@@ -1,0 +1,24 @@
+{
+  "name": "qr-poc",
+  "version": "0.0.1",
+  "description": "POC for QR Code development/delivery.",
+  "author": "Venkat <venkyramachandran82@gmail.com>",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/venkyramachandran82/qr-poc"
+  },
+  "bugs": {
+    "url": "https://github.com/venkyramachandran82/qr-poc/issues"
+  },
+  "dependencies": {
+    "express": "4.2.x",
+    "body-parser": "1.8.1",
+    "qr-image": "3.0.0",
+    "mongoose": "3.8.x",
+    "node-uuid": "1.4.2"
+  },
+  "private": true
+}
