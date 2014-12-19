@@ -48,9 +48,11 @@ router.post('/documents', function(req, res) {
     img.on('data', function(data){buffers.push(data);});
     img.on('end', function(){
       encodedData = Buffer.concat(buffers);
-      var data = "data:image/png;base64," + 
-                 encodedData.toString('base64');
-      res.status(201).set("image/png").send(data).end();      
+      var data = {};
+      data.id = document.documentId;
+      data.imageData = "data:image/png;base64," + encodedData.toString('base64');
+      res.setHeader("Content-Type", "application/json");
+      res.status(201).send(data).end();      
     });
   });
 });
